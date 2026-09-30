@@ -1,9 +1,11 @@
-DPK Service — moderne full-width onepage
+DPK Service Website
 
-De website is bewust full-width opgebouwd:
-- geen max-width container
-- geen kaart/box rond de volledige website
-- volledige viewportbreedte
-- desktop: ontworpen om compact te blijven
-- mobiel: responsive en scrollbaar waar nodig
-- Bootstrap 5.3.8 via jsDelivr
+This is a hobby project I made for a company based in Ingelmunster, Belgium.
+
+I built this website myself to get more experience with web development and to improve my skills.
+
+Technologies used
+
+• HTML
+• CSS
+• JavaScript
