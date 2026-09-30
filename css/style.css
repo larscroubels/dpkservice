@@ -114,6 +114,7 @@ a {
   display: inline-block;
   transform: translate(2px, -2px);
 }
+
 .hero {
   position: relative;
   min-height: 385px;
@@ -273,7 +274,7 @@ a {
 }
 
 .services {
-  padding: 32px clamp(20px, 6vw, 96px);
+  padding: 100px clamp(20px, 6vw, 96px);
   background: var(--soft);
 }
 
@@ -298,7 +299,7 @@ a {
 .section-intro h2,
 .contact-main h2 {
   margin: 0;
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 850;
   letter-spacing: -0.045em;
 }
@@ -306,7 +307,7 @@ a {
 .section-intro p {
   margin: 0 0 2px;
   color: var(--grey);
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .service-grid {
@@ -320,8 +321,8 @@ a {
 
 .service {
   position: relative;
-  min-height: 126px;
-  padding: 17px;
+  min-height: 180px;
+  padding: 25px;
   border-right: 1px solid var(--line);
   transition: 0.22s ease;
 }
@@ -373,15 +374,19 @@ a {
 .contact-row {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  min-height: 170px;
+  min-height: 320px;
   color: #fff;
   background: var(--black);
+  padding: 0 clamp(20px, (100% - 1500px) / 2, 96px);
 }
 
 .contact-main {
   position: relative;
-  padding: 27px clamp(20px, 6vw, 96px);
+  padding: 50px clamp(20px, 6vw, 96px);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-main::after {
@@ -406,7 +411,7 @@ a {
 .contact-main p {
   margin: 0 0 13px;
   color: #8e9399;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .email-button {
@@ -414,17 +419,20 @@ a {
   z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 28px;
-  padding: 9px 12px;
+  gap: 12px;
+  padding: 6px 8px;
   background: var(--orange);
   color: #fff;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 800;
+  width: 26%;
+  max-width: 100%;
 }
 
 .email-button span {
-  font-size: 16px;
+  font-size: 12px;
+  margin-left: auto;
 }
 
 .email-button:hover {
@@ -433,8 +441,11 @@ a {
 }
 
 .websites {
-  padding: 27px clamp(20px, 5vw, 75px);
+  padding: 40px clamp(20px, 5vw, 75px);
   border-left: 1px solid #24262a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .websites > .section-label {
