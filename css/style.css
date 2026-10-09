@@ -325,6 +325,11 @@ a {
   padding: 25px;
   border-right: 1px solid var(--line);
   transition: 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .service:last-child {
@@ -376,7 +381,7 @@ a {
   grid-template-columns: 1.2fr 0.8fr;
   min-height: 320px;
   color: #fff;
-  background: var(--black);
+  background: #121416;
   padding: 0 clamp(20px, (100% - 1500px) / 2, 96px);
 }
 
@@ -420,14 +425,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 6px 8px;
+  padding: 8px 12px;
   background: var(--orange);
   color: #fff;
   text-decoration: none;
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 800;
-  width: 26%;
-  max-width: 100%;
+  white-space: nowrap;
+  width: auto;
+  max-width: 50%;
 }
 
 .email-button span {
@@ -483,9 +489,23 @@ a {
 
 .websites i {
   color: var(--orange);
-  font-size: 15px;
+  font-size: 18px;
   font-style: normal;
+  font-weight: 700;
   transition: transform 0.2s ease;
+  filter: drop-shadow(0 0 2px var(--orange));
+}
+
+.globe-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--orange);
+  color: var(--orange);
+  transition: transform 0.2s ease;
+}
+
+.websites a:hover .globe-icon {
+  transform: translate(3px, -3px);
 }
 
 .websites a:hover i {
@@ -613,6 +633,14 @@ a {
   .nav-mail {
     font-size: 10px;
   }
+  .contact-row {
+    padding: 0;
+  }
+  .websites {
+    padding: 40px clamp(20px, 5vw, 75px);
+    border-left: 0;
+    border-top: 1px solid #24262a;
+  }
   .hero {
     min-height: 410px;
     padding-top: 35px;
@@ -631,13 +659,19 @@ a {
     gap: 8px;
   }
   .service-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .service {
+    border-right: 1px solid var(--line);
+  }
+  .service:nth-child(2n) {
     border-right: 0;
   }
   .service:last-child {
     border-bottom: 0;
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 50%;
   }
   .services {
     padding-top: 27px;
@@ -645,6 +679,9 @@ a {
   }
   .contact-main {
     padding-top: 27px;
+    background: #fff;
+    color: var(--black);
+    grid-column: 1 / -1;
   }
   .site-footer {
     grid-template-columns: 1fr 1fr;
