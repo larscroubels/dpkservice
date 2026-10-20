@@ -613,10 +613,9 @@ a {
 .footer-bottom {
   grid-column: 1 / -1;
   margin-top: 8px;
-  padding-top: 13px;
   display: flex;
-  justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  flex-direction: column;
+  gap: 13px;
   color: #fff;
   font-size: 10px;
   font-weight: 750;
@@ -624,8 +623,108 @@ a {
   text-transform: uppercase;
 }
 
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .footer-bottom span:first-child {
   color: #fff;
+}
+
+.cookie-banner {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  max-width: 420px;
+  padding: 18px 20px;
+  background: var(--black);
+  color: #fff;
+  border-left: 3px solid var(--orange);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner p {
+  margin: 0 0 14px;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-btn {
+  padding: 9px 16px;
+  border: 1px solid var(--orange);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cookie-accept {
+  background: var(--orange);
+  color: #fff;
+}
+
+.cookie-decline {
+  background: transparent;
+  color: #fff;
+}
+
+.cookie-btn:hover {
+  background: #fff;
+  color: var(--black);
+}
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    max-width: none;
+  }
+}
+
+.powered-by {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-left: auto;
+}
+
+.powered-by span {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.powered-by a {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.kroebelz-logo {
+  height: 29.4px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.kroebelz-logo:hover {
+  opacity: 1;
 }
 
 @media (max-width: 900px) {
