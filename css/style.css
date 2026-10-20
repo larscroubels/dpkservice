@@ -612,7 +612,7 @@ a {
 
 .footer-bottom {
   grid-column: 1 / -1;
-  margin-top: 8px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -699,7 +699,13 @@ a {
   display: flex;
   align-items: center;
   gap: 1px;
-  margin-left: auto;
+  width: calc(100% + 2 * clamp(20px, 6vw, 96px));
+  margin-left: calc(-1 * clamp(20px, 6vw, 96px));
+  margin-right: calc(-1 * clamp(20px, 6vw, 96px));
+  margin-top: 0;
+  margin-bottom: -18px;
+  padding: 13px clamp(20px, 6vw, 96px);
+  background: var(--black);
 }
 
 .powered-by span {
@@ -721,6 +727,7 @@ a {
   width: auto;
   opacity: 0.9;
   transition: opacity 0.3s ease;
+  filter: brightness(0) invert(1);
 }
 
 .kroebelz-logo:hover {
