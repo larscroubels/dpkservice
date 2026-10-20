@@ -614,20 +614,28 @@ a {
   grid-column: 1 / -1;
   margin-top: 25px;
   display: flex;
-  flex-direction: column;
-  gap: 13px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
   color: #fff;
   font-size: 10px;
   font-weight: 750;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  background: var(--black);
+  width: calc(100% + 2 * clamp(20px, 6vw, 96px));
+  margin-left: calc(-1 * clamp(20px, 6vw, 96px));
+  margin-right: calc(-1 * clamp(20px, 6vw, 96px));
+  margin-bottom: -18px;
+  padding: 13px clamp(20px, 6vw, 96px);
 }
 
 .footer-info {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 13px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .footer-bottom span:first-child {
@@ -698,18 +706,12 @@ a {
 .powered-by {
   display: flex;
   align-items: center;
-  gap: 1px;
-  width: calc(100% + 2 * clamp(20px, 6vw, 96px));
-  margin-left: calc(-1 * clamp(20px, 6vw, 96px));
-  margin-right: calc(-1 * clamp(20px, 6vw, 96px));
-  margin-top: 0;
-  margin-bottom: -18px;
-  padding: 13px clamp(20px, 6vw, 96px);
-  background: var(--black);
+  gap: 0px;
+  justify-content: flex-end;
 }
 
 .powered-by span {
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 750;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -723,7 +725,7 @@ a {
 }
 
 .kroebelz-logo {
-  height: 29.4px;
+  height: 30px;
   width: auto;
   opacity: 0.9;
   transition: opacity 0.3s ease;
