@@ -966,4 +966,13 @@ a {
     width: 100%;
     justify-content: center;
   }
+
+  .powered-by {
+    border-top: 1px solid rgba(255, 90, 0, 0.3);
+    padding-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
